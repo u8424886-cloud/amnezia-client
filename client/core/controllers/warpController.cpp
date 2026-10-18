@@ -1,5 +1,7 @@
 #include "warpController.h"
 
+#include <QDebug>
+#include <utility>
 #include <QDateTime>
 #include <QDesktopServices>
 #include <QDir>
