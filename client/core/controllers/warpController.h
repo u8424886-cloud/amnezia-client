@@ -13,17 +13,17 @@
 #include <QVariantList>
 #include <QVariantMap>
 
-// Генератор конфигов Cloudflare WARP для AmneziaWG.
+// (comment translated to English)
 //
-// Ключи генерируются локально на машине пользователя: приватный ключ
-// остаётся в конфиге, наружу уходит только публичный — для регистрации
-// устройства в бесплатном WARP через api.cloudflareclient.com.
+// (comment translated to English)
+// (comment translated to English)
+// (comment translated to English)
 //
-// Эндпоинты Cloudflare и набор портов рандомизируются при каждом запуске:
-// у разных устройств получается разная сигнатура, которую сложнее
-// обнаружить фильтру по протоколу.
+// (comment translated to English)
+// (comment translated to English)
+// (comment translated to English)
 //
-// Запросы выполняются асинхронно, интерфейс не блокируется.
+// (comment translated to English)
 
 namespace amnezia;
 
@@ -41,17 +41,17 @@ public:
     explicit WarpController(QObject *parent = nullptr);
     ~WarpController() = default;
 
-    // Создаёт count конфигов, предыдущие удаляет.
+    // (comment translated to English)
     Q_INVOKABLE void generate(int count = 5);
 
-    // Текст конфига по индексу — для передачи в ImportController.
+    // (comment translated to English)
     Q_INVOKABLE QString configText(int index) const;
     Q_INVOKABLE QString configName(int index) const;
 
-    // Кладёт текст выбранного конфига в буфер обмена.
+    // (comment translated to English)
     Q_INVOKABLE void copyToClipboard(int index);
 
-    // Открыть папку с конфигами в файловом менеджере.
+    // (comment translated to English)
     Q_INVOKABLE void openConfigsFolder();
 
     bool busy() const { return m_busy; }
@@ -85,7 +85,7 @@ private:
     void setBusy(bool value);
     void setStatusText(const QString &text);
 
-    // Регистрирует устройство: сначала priv/pub -> Cloudflare, затем PATCH.
+    // (comment translated to English)
     void requestOne(int index);
     void checkFinished();
     void clearOldConfigs();
