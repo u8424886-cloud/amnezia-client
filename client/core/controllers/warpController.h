@@ -113,9 +113,9 @@ private:
     bool m_busy = false;
     QString m_statusText;
 
-    QList<GeneratedConfig> m_generated;  // свежая партия, ещё без путей
-    QList<GeneratedConfig> m_configs;     // готово к выдаче в QML
-    QVariantList m_exposed;               // то же, но в виде QVariantList
+    QList<GeneratedConfig> m_generated;  // freshly generated, no file paths yet
+    QList<GeneratedConfig> m_configs;     // ready to expose to QML
+    QVariantList m_exposed;               // same, as QVariantList
 };
 
 #endif // WARPCONTROLLER_H
