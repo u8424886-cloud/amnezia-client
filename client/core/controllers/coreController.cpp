@@ -8,6 +8,7 @@
 #include "core/utils/selfhosted/sshSession.h"
 #include "core/controllers/selfhosted/installController.h"
 #include "core/controllers/selfhosted/importController.h"
+#include "core/controllers/warpController.h"
 #include "core/controllers/coreSignalHandlers.h"
 #include "logger.h"
 #include "secureQSettings.h"
@@ -202,6 +203,9 @@ void CoreController::initControllers()
 
     m_importController = new ImportUiController(m_importCoreController, this);
     setQmlContextProperty("ImportController", m_importController);
+
+    m_warpController = new WarpController(this);
+    setQmlContextProperty("WarpController", m_warpController);
 
     m_exportUiController = new ExportUiController(m_exportController, this);
     setQmlContextProperty("ExportController", m_exportUiController);
