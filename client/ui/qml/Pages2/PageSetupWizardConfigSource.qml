@@ -271,6 +271,7 @@ PageType {
     }
 
     property list<QtObject> variants: [
+        warpGenerator,
         amneziaVpn,
         selfHostVpn,
         backupRestore,
@@ -281,13 +282,26 @@ PageType {
     ]
     
     QtObject {
+        id: warpGenerator
+
+        property bool featuredAmneziaConnection: true
+        property string title: qsTr("WARP Generator")
+        property string description: qsTr("Generate free Cloudflare WARP configs")
+        property string imageSource: "qrc:/images/controls/plus.svg"
+        property bool isVisible: true
+        property var handler: function() {
+            PageController.goToPage(PageEnum.PageSetupWizardWarpGenerator)
+        }
+    }
+
+    QtObject {
         id: amneziaVpn
 
         property string title: qsTr("VPN by Amnezia")
         property string description: qsTr("The easiest way to connect to the VPN")
         property string imageSource: "qrc:/images/controls/amnezia.svg"
         property bool featuredAmneziaConnection: true
-        property bool isVisible: true
+        property bool isVisible: false  // Скрыт: свой сервер Amnezia не используется
         property var handler: function() {
             PageController.showBusyIndicator(true)
             var result = SubscriptionUiController.fillAvailableServices()
@@ -305,7 +319,7 @@ PageType {
         property string title: qsTr("Self-hosted VPN")
         property string description: qsTr("Configure Amnezia VPN on your own server")
         property string imageSource: "qrc:/images/controls/server.svg"
-        property bool isVisible: true
+        property bool isVisible: false  // Скрыт: своего сервера нет
         property var handler: function() {
             PageController.goToPage(PageEnum.PageSetupWizardCredentials)
         }
