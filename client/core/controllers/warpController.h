@@ -25,8 +25,7 @@
 //
 // Запросы выполняются асинхронно, интерфейс не блокируется.
 
-namespace amnezia
-{
+namespace amnezia;
 
 class WarpController : public QObject
 {
@@ -118,7 +117,5 @@ private:
     QList<GeneratedConfig> m_configs;     // готово к выдаче в QML
     QVariantList m_exposed;               // то же, но в виде QVariantList
 };
-
-}  // namespace amnezia
 
 #endif // WARPCONTROLLER_H
