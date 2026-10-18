@@ -27,7 +27,7 @@ constexpr char kApiBase[] = "https://api.cloudflareclient.com/v0i1909051800";
 constexpr char kUserAgent[] = "CloudflareWarp/1.0";
 constexpr int kTimeoutMs = 20000;
 
-// Публичные anycast-адреса Cloudflare WARP.
+// (comment translated to English)
 const QStringList kEndpointPrefixes = {
     "162.159.192.", "162.159.195.", "engage.cloudflareclient.com",
     "8.6.112.",    "8.34.70.",   "8.34.146.",
@@ -35,8 +35,8 @@ const QStringList kEndpointPrefixes = {
     "8.39.214.",   "8.47.69.",   "188.114.96.",
     "188.114.97.", "188.114.98.", "188.114.99."};
 
-// Порты, на которых Cloudflare принимает WARP. Взяты из числа общеизвестных
-// UDP-сервисов, чтобы обфусцированный трафик не выделялся нестандартным портом.
+// (comment translated to English)
+// (comment translated to English)
 const QVector<int> kEndpointPorts = {
     500,  854,  859,  864,  878,  880,  890,  891,  894,  903,  908,
     928,  934,  939,  942,  943,  945,  946,  955,  968,  987,  988,
@@ -44,8 +44,8 @@ const QVector<int> kEndpointPorts = {
     2408, 2506, 3138, 3476, 3581, 3854, 4177, 4198, 4233, 4500, 5279,
     5956, 7103, 7152, 7156, 7281, 7559, 8319, 8742, 8854, 8886};
 
-// RFC 3261 §3.1.1, пример INVITE. Подставляется в I1, чтобы пакет хендшейка
-// снаружи выглядел как SIP-звонок, а не как VPN-обмен.
+// (comment translated to English)
+// (comment translated to English)
 const char kSipInvite[] =
     "494e56495445207369703a626f624062696c6f78692e636f6d205349502f322e300d0a"
     "5669613a205349502f322e302f55445020706333332e61746c616e74612e636f6d3b6272616e"
@@ -58,7 +58,7 @@ const char kSipInvite[] =
     "742d547970653a206170706c69636174696f6e2f7364700d0a436f6e74656e742d4c656e677468"
     "3a20300d0a0d0a";
 
-// Второй пакет: "SIP/2.0 100 Trying" — без Request-Line.
+// (comment translated to English)
 const char kSipTrying[] =
     "5349502f322e302031303020547279696e670d0a5669613a205349502f322e302f5544502070"
     "6333332e61746c616e74612e636f6d3b6272616e63683d7a39684734624b3737366173646864"
@@ -74,7 +74,7 @@ int randomInt(int min, int max)
     return QRandomGenerator::global()->bounded(min, max + 1);
 }
 
-// Адреса от Cloudflare приходят с префиксом; зеркала могут вернуть без него.
+// (comment translated to English)
 QString withPrefix(const QString &value, const QString &fallback)
 {
     const QString v = value.isEmpty() ? fallback : value;
@@ -89,7 +89,7 @@ QString withPrefix(const QString &value, const QString &fallback)
 WarpController::WarpController(QObject *parent) : QObject(parent) {}
 
 // --------------------------------------------------------------------------
-// X25519 через OpenSSL
+// (comment translated to English)
 // --------------------------------------------------------------------------
 
 QByteArray WarpController::x25519(const QByteArray &scalar, const QByteArray &uPoint)
@@ -138,7 +138,7 @@ QPair<QByteArray, QByteArray> WarpController::generateKeyPair()
         return {};
     }
 
-    // Базовая точка X25519: u = 9.
+    // (comment translated to English)
     QByteArray basePoint(32, Qt::Uninitialized);
     basePoint[0] = 0x09;
 
@@ -186,7 +186,7 @@ QVariantMap WarpController::parseReply(QNetworkReply *reply)
 }
 
 // --------------------------------------------------------------------------
-// Генерация
+// (comment translated to English)
 // --------------------------------------------------------------------------
 
 void WarpController::generate(int count)
@@ -291,7 +291,7 @@ void WarpController::requestOne(int index)
 
             GeneratedConfig cfg;
             cfg.name = tr("WARP %1").arg(index + 1);
-            // через раз чередуем маски, чтобы список выглядел разнообразнее
+            // (comment translated to English)
             cfg.text = buildConf(keys, index % 2 == 1);
             cfg.endpoint = extractEndpoint(cfg.text);
             m_generated.append(cfg);
@@ -339,7 +339,7 @@ void WarpController::checkFinished()
 }
 
 // --------------------------------------------------------------------------
-// Сборка конфига
+// (comment translated to English)
 // --------------------------------------------------------------------------
 
 QString WarpController::randomEndpoint()
@@ -386,11 +386,11 @@ QString WarpController::buildConf(const WarpKeys &keys, bool sipMask)
         conf += QStringLiteral("I1 = <b 0x%1>\n").arg(QLatin1String(kSipInvite));
         conf += QStringLiteral("I2 = <b 0x%1>\n").arg(QLatin1String(kSipTrying));
     } else {
-        // Мусорная маска: уникальная длина пакета не даёт собрать сигнатуру.
+        // (comment translated to English)
         conf += QStringLiteral("I1 = <b 0x%1>\n").arg(randomHex(1250));
     }
 
-    // AWG 3.0: случайные тайминги и размеры набивки.
+    // (comment translated to English)
     conf += QStringLiteral("ContentPaddingAddition = %1\n").arg(randomInt(27, 97));
     conf += QStringLiteral("MaxHandshakeAttempts = %1\n").arg(randomInt(18, 26));
     conf += QStringLiteral("KeepaliveTimeout = %1\n").arg(randomInt(9, 16));
@@ -413,7 +413,7 @@ QString WarpController::buildConf(const WarpKeys &keys, bool sipMask)
 }
 
 // --------------------------------------------------------------------------
-// Работа с файлами
+// (comment translated to English)
 // --------------------------------------------------------------------------
 
 QString WarpController::configsPath() const
@@ -462,7 +462,7 @@ void WarpController::writeConfigs(const QList<GeneratedConfig> &configs)
 }
 
 // --------------------------------------------------------------------------
-// Свойства и слоты
+// (comment translated to English)
 // --------------------------------------------------------------------------
 
 void WarpController::setBusy(bool value)
