@@ -18,9 +18,6 @@
 #include <openssl/evp.h>
 #include <openssl/rand.h>
 
-namespace amnezia
-{
-
 namespace
 {
 
@@ -515,4 +512,3 @@ void WarpController::openConfigsFolder()
     QDesktopServices::openUrl(QUrl::fromLocalFile(configsPath()));
 }
 
-}  // namespace amnezia
