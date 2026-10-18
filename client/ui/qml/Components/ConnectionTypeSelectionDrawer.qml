@@ -37,6 +37,8 @@ SheetType {
             Layout.leftMargin: 16
             Layout.rightMargin: 16
 
+            visible: false  // свой сервер не используется
+
             text: qsTr("Configure your server")
             trailingIconSource: "qrc:/images/controls/chevron-right.svg"
 
@@ -57,6 +59,21 @@ SheetType {
 
             onClicked: {
                 PageController.goToPage(PageEnum.PageSetupWizardConfigSource)
+                root.close()
+            }
+        }
+
+        ListItemType {
+            id: warp
+            Layout.fillWidth: true
+            Layout.leftMargin: 16
+            Layout.rightMargin: 16
+
+            text: qsTr("WARP Generator")
+            trailingIconSource: "qrc:/images/controls/chevron-right.svg"
+
+            onClicked: {
+                PageController.goToPage(PageEnum.PageSetupWizardWarpGenerator)
                 root.close()
             }
         }
