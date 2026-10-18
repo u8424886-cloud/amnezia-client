@@ -203,7 +203,7 @@ void WarpController::generate(int count)
 
     clearOldConfigs();
     setBusy(true);
-    setStatusText(tr("Генерация конфигов..."));
+    setStatusText(tr("Generating configs..."));
     emit configsChanged();
 
     for (int i = 0; i < m_targetCount; ++i) {
@@ -310,7 +310,7 @@ void WarpController::checkFinished()
     m_pending = 0;
 
     if (m_generated.isEmpty()) {
-        setStatusText(tr("Не удалось получить ключи WARP. Попробуйте позже."));
+        setStatusText(tr("Failed to get WARP keys. Try again later."));
         setBusy(false);
         return;
     }
@@ -329,9 +329,9 @@ void WarpController::checkFinished()
         m_exposed.append(map);
     }
 
-    QString status = tr("Готово: %1 конфигов").arg(m_configs.size());
+    QString status = tr("Done: %1 configs").arg(m_configs.size());
     if (m_failures > 0) {
-        status += tr(" (ошибок: %1)").arg(m_failures);
+        status += tr(" (errors: %1)").arg(m_failures);
     }
     setStatusText(status);
     emit configsChanged();
@@ -505,7 +505,7 @@ void WarpController::copyToClipboard(int index)
         return;
     }
     QGuiApplication::clipboard()->setText(m_configs[index].text);
-    setStatusText(tr("Конфиг скопирован"));
+    setStatusText(tr("Config copied"));
 }
 
 void WarpController::openConfigsFolder()
