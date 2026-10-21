@@ -37,7 +37,7 @@ const QStringList kEndpointPrefixes = {
 
 // (comment translated to English)
 // (comment translated to English)
-const QVector<int> kEndpointPorts = {
+const QList<int> kEndpointPorts = {
     500,  854,  859,  864,  878,  880,  890,  891,  894,  903,  908,
     928,  934,  939,  942,  943,  945,  946,  955,  968,  987,  988,
     1002, 1010, 1014, 1018, 1070, 1074, 1180, 1387, 1701, 1843, 2371,
@@ -213,6 +213,11 @@ void WarpController::generate(int count)
 
 void WarpController::requestOne(int index)
 {
+    // Count this task before anything can fail, otherwise a key-generation
+    // failure calls checkFinished() with m_pending == 0 and finalizes the
+    // batch while the other requests are still running.
+    ++m_pending;
+
     const auto keyPair = generateKeyPair();
     if (keyPair.first.isEmpty()) {
         ++m_failures;
@@ -221,7 +226,6 @@ void WarpController::requestOne(int index)
     }
 
     m_pendingKeys.insert(index, QString::fromLatin1(keyPair.first));
-    ++m_pending;
 
     QVariantMap body;
     body["install_id"] = QString();

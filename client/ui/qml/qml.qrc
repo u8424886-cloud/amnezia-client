@@ -171,6 +171,7 @@
         <file>Pages2/PageSetupWizardQrReader.qml</file>
         <file>Pages2/PageSetupWizardStart.qml</file>
         <file>Pages2/PageSetupWizardTextKey.qml</file>
+        <file>Pages2/PageSetupWizardWarpGenerator.qml</file>
         <file>Pages2/PageSetupWizardViewConfig.qml</file>
         <file>Pages2/PageShare.qml</file>
         <file>Pages2/PageShareFullAccess.qml</file>

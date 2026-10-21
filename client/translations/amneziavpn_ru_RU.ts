@@ -155,6 +155,11 @@
         <source>Open config file, key or QR code</source>
         <translation>Открыть файл конфигурации, ключ или QR-код</translation>
     </message>
+        <message>
+            <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="1"/>
+            <source>WARP Generator</source>
+            <translation>Генератор WARP</translation>
+        </message>
 </context>
 <context>
     <name>ConnectionUiController</name>
@@ -5669,6 +5674,16 @@ Create one from the current settings.</source>
         <source>I have nothing</source>
         <translation>У меня ничего нет</translation>
     </message>
+        <message>
+            <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="1"/>
+            <source>WARP Generator</source>
+            <translation>Генератор WARP</translation>
+        </message>
+        <message>
+            <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="1"/>
+            <source>Generate free Cloudflare WARP configs</source>
+            <translation>Сгенерировать бесплатные конфиги Cloudflare WARP</translation>
+        </message>
 </context>
 <context>
     <name>PageSetupWizardCredentials</name>
@@ -7708,4 +7723,75 @@ Remove the server from the app to continue.</source>
         <translation>Невозможно удалить сервер во время активного соединения</translation>
     </message>
 </context>
+    <context>
+        <name>PageSetupWizardWarpGenerator</name>
+        <message>
+            <location filename="../ui/qml/Pages2/PageSetupWizardWarpGenerator.qml" line="1"/>
+            <source>WARP Generator</source>
+            <translation>Генератор WARP</translation>
+        </message>
+        <message>
+            <location filename="../ui/qml/Pages2/PageSetupWizardWarpGenerator.qml" line="1"/>
+            <source>Free Cloudflare WARP configs for AmneziaWG</source>
+            <translation>Бесплатные конфигурации Cloudflare WARP для AmneziaWG</translation>
+        </message>
+        <message>
+            <location filename="../ui/qml/Pages2/PageSetupWizardWarpGenerator.qml" line="1"/>
+            <source>How it works</source>
+            <translation>Как это работает</translation>
+        </message>
+        <message>
+            <location filename="../ui/qml/Pages2/PageSetupWizardWarpGenerator.qml" line="1"/>
+            <source>Every config gets its own key pair right on this computer. The public key goes to Cloudflare, the private key stays in the config. Addresses and ports are random so the traffic does not stand out.</source>
+            <translation>Каждый конфиг получает свою пару ключей прямо на этом компьютере. Публичный ключ уходит в Cloudflare, приватный остаётся в конфиге. Адреса и порты случайные, чтобы трафик не выделялся на фоне остального.</translation>
+        </message>
+        <message>
+            <location filename="../ui/qml/Pages2/PageSetupWizardWarpGenerator.qml" line="1"/>
+            <source>Regenerate</source>
+            <translation>Сгенерировать заново</translation>
+        </message>
+        <message>
+            <location filename="../ui/qml/Pages2/PageSetupWizardWarpGenerator.qml" line="1"/>
+            <source>Generate 5 configs</source>
+            <translation>Сгенерировать 5 конфигов</translation>
+        </message>
+        <message>
+            <location filename="../ui/qml/Pages2/PageSetupWizardWarpGenerator.qml" line="1"/>
+            <source>Open configs folder</source>
+            <translation>Открыть папку с конфигами</translation>
+        </message>
+    </context>
+    <context>
+        <name>WarpController</name>
+        <message>
+            <location filename="../core/controllers/warpController.cpp" line="1"/>
+            <source>Generating configs...</source>
+            <translation>Генерация конфигов...</translation>
+        </message>
+        <message>
+            <location filename="../core/controllers/warpController.cpp" line="1"/>
+            <source>Failed to get WARP keys. Try again later.</source>
+            <translation>Не удалось получить ключи WARP. Попробуйте позже.</translation>
+        </message>
+        <message>
+            <location filename="../core/controllers/warpController.cpp" line="1"/>
+            <source>Done: %1 configs</source>
+            <translation>Готово: %1 конфигов</translation>
+        </message>
+        <message>
+            <location filename="../core/controllers/warpController.cpp" line="1"/>
+            <source> (errors: %1)</source>
+            <translation> (ошибок: %1)</translation>
+        </message>
+        <message>
+            <location filename="../core/controllers/warpController.cpp" line="1"/>
+            <source>Config copied</source>
+            <translation>Конфиг скопирован</translation>
+        </message>
+        <message>
+            <location filename="../core/controllers/warpController.cpp" line="1"/>
+            <source>WARP %1</source>
+            <translation>WARP %1</translation>
+        </message>
+    </context>
 </TS>

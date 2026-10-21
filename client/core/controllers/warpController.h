@@ -25,7 +25,9 @@
 //
 // (comment translated to English)
 
-namespace amnezia;
+// WarpController lives in the global scope, like ImportUiController.
+// Do NOT add "namespace amnezia;" here: a namespace-declaration in a scope
+// that already has "using namespace amnezia;" is ill-formed (MSVC C2059).
 
 class WarpController : public QObject
 {
