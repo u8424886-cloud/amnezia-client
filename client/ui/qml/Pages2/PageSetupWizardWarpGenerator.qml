@@ -127,7 +127,8 @@ PageType {
                     Layout.rightMargin: 16
                     Layout.bottomMargin: 24 + PageController.safeAreaBottomMargin
 
-                    visible: WarpController.hasConfigs
+                    // There is no user visible folder on mobile.
+                    visible: WarpController.hasConfigs && !GC.isMobile()
 
                     spacing: 12
 

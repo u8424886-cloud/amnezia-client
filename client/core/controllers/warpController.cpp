@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <utility>
 #include <QDateTime>
+#include <QClipboard>
 #include <QDesktopServices>
 #include <QDir>
 #include <QFile>
@@ -28,6 +29,17 @@ constexpr char kUserAgent[] = "CloudflareWarp/1.0";
 constexpr int kTimeoutMs = 20000;
 
 // (comment translated to English)
+// Public worker mirrors. The direct api.cloudflareclient.com answers 404 for
+// requests that do not come from a Cloudflare edge, so these are the
+// reliable path. The same answer comes from any of them.
+const QStringList kMirrorUrls = {
+    "https://warp-sub.warp-api.cfd",
+    "https://warp-workers.warp-api.cfd",
+    "https://warp-vercel-chi.warp-api.cfd",
+    "https://warp-vercel-murex.warp-api.cfd",
+    "https://warp-netlify.warp-api.cfd",
+};
+
 const QStringList kEndpointPrefixes = {
     "162.159.192.", "162.159.195.", "engage.cloudflareclient.com",
     "8.6.112.",    "8.34.70.",   "8.34.146.",
@@ -200,6 +212,7 @@ void WarpController::generate(int count)
     m_failures = 0;
     m_generated.clear();
     m_pendingKeys.clear();
+    m_mirrorCursor.clear();
 
     clearOldConfigs();
     setBusy(true);
@@ -227,16 +240,16 @@ void WarpController::requestOne(int index)
 
     m_pendingKeys.insert(index, QString::fromLatin1(keyPair.first));
 
-    QVariantMap body;
-    body["install_id"] = QString();
-    body["tos"] = "2024-01-01T00:00:00.000Z";
-    body["key"] = QString::fromLatin1(keyPair.second);
-    body["fcm_token"] = QString();
-    body["type"] = "ios";
-    body["locale"] = "en_US";
+    QJsonObject body;
+    body.insert("install_id", QJsonValue(QString()));
+    body.insert("tos", QJsonValue(QStringLiteral("2024-01-01T00:00:00.000Z")));
+    body.insert("key", QJsonValue(QString::fromLatin1(keyPair.second)));
+    body.insert("fcm_token", QJsonValue(QString()));
+    body.insert("type", QJsonValue(QStringLiteral("ios")));
+    body.insert("locale", QJsonValue(QStringLiteral("en_US")));
 
     QNetworkReply *reply = m_manager.post(apiRequest(QStringLiteral("reg")),
-                                           QJsonDocument(body.toJsonObject()).toJson());
+                                           QJsonDocument(body).toJson());
 
     connect(reply, &QNetworkReply::finished, this, [this, reply, index]() {
         const QVariantMap reg = parseReply(reply);
@@ -247,20 +260,20 @@ void WarpController::requestOne(int index)
         const QString token = result.value(QStringLiteral("token")).toString();
 
         if (deviceId.isEmpty() || token.isEmpty()) {
-            qWarning() << "WARP reg failed, index" << index;
-            ++m_failures;
-            checkFinished();
+            qWarning() << "WARP reg failed, index" << index << "- trying mirrors";
+            tryMirror(index);
             return;
         }
 
-        QVariantMap enableBody;
-        enableBody["warp_enabled"] = true;
+        QJsonObject enableBody;
+        enableBody.insert("warp_enabled", QJsonValue(true));
 
         QNetworkRequest enableRequest = apiRequest(QStringLiteral("reg/") + deviceId);
         enableRequest.setRawHeader("Authorization", QByteArray("Bearer ") + token.toUtf8());
 
-        QNetworkReply *enableReply = m_manager.patch(
-            enableRequest, QJsonDocument(enableBody.toJsonObject()).toJson());
+        // QNetworkAccessManager has no patch(); a custom verb is the way.
+        QNetworkReply *enableReply = m_manager.sendCustomRequest(
+            enableRequest, QByteArrayLiteral("PATCH"), QJsonDocument(enableBody).toJson());
 
         connect(enableReply, &QNetworkReply::finished, this, [this, enableReply, index]() {
             const QVariantMap enabled = parseReply(enableReply);
@@ -271,9 +284,8 @@ void WarpController::requestOne(int index)
             const QVariantList peers = config.value(QStringLiteral("peers")).toList();
 
             if (peers.isEmpty()) {
-                qWarning() << "WARP peers empty, index" << index;
-                ++m_failures;
-                checkFinished();
+                qWarning() << "WARP peers empty, index" << index << "- trying mirrors";
+                tryMirror(index);
                 return;
             }
 
@@ -288,21 +300,68 @@ void WarpController::requestOne(int index)
             keys.ipv6 = withPrefix(addresses.value(QStringLiteral("v6")).toString(), QStringLiteral("2606:4700:110::1"));
 
             if (keys.privateKey.isEmpty() || keys.peerPublicKey.isEmpty()) {
+                qWarning() << "WARP keys incomplete, index" << index;
                 ++m_failures;
                 checkFinished();
                 return;
             }
 
-            GeneratedConfig cfg;
-            cfg.name = tr("WARP %1").arg(index + 1);
-            // (comment translated to English)
-            cfg.text = buildConf(keys, index % 2 == 1);
-            cfg.endpoint = extractEndpoint(cfg.text);
-            m_generated.append(cfg);
-
-            checkFinished();
+            finishConfig(index, keys, index % 2 == 1);
         });
     });
+}
+
+void WarpController::tryMirror(int index)
+{
+    const int cursor = m_mirrorCursor.value(index, 0);
+    if (cursor >= kMirrorUrls.size()) {
+        qWarning() << "WARP: no mirror left, index" << index;
+        ++m_failures;
+        checkFinished();
+        return;
+    }
+    m_mirrorCursor.insert(index, cursor + 1);
+
+    const QString url = kMirrorUrls.at(cursor);
+    qWarning() << "WARP: trying mirror" << url;
+
+    QNetworkReply *reply = m_manager.get(mirrorRequest(url));
+    connect(reply, &QNetworkReply::finished, this, [this, reply, index]() {
+        const QVariantMap data = parseReply(reply);
+        reply->deleteLater();
+
+        // The mirrors answer either bare or wrapped into a "result" field.
+        const QVariantMap payload = data.contains(QStringLiteral("result"))
+                                        ? data.value(QStringLiteral("result")).toMap()
+                                        : data;
+
+        WarpKeys keys;
+        keys.privateKey = payload.value(QStringLiteral("privKey")).toString();
+        keys.peerPublicKey = payload.value(QStringLiteral("peer_pub")).toString();
+        keys.ipv4 = withPrefix(payload.value(QStringLiteral("client_ipv4")).toString(),
+                               QStringLiteral("172.16.0.2"));
+        keys.ipv6 = withPrefix(payload.value(QStringLiteral("client_ipv6")).toString(),
+                               QStringLiteral("2606:4700:110::1"));
+
+        if (keys.privateKey.isEmpty() || keys.peerPublicKey.isEmpty()) {
+            qWarning() << "WARP: unexpected mirror format at" << url;
+            tryMirror(index);
+            return;
+        }
+
+        finishConfig(index, keys, index % 2 == 1);
+    });
+}
+
+void WarpController::finishConfig(int index, const WarpKeys &keys, bool sipMask)
+{
+    GeneratedConfig cfg;
+    cfg.name = tr("WARP %1").arg(index + 1);
+    cfg.text = buildConf(keys, sipMask);
+    cfg.endpoint = extractEndpoint(cfg.text);
+    m_generated.append(cfg);
+
+    checkFinished();
 }
 
 void WarpController::checkFinished()
@@ -330,7 +389,7 @@ void WarpController::checkFinished()
         map[QStringLiteral("name")] = cfg.name;
         map[QStringLiteral("endpoint")] = cfg.endpoint;
         map[QStringLiteral("fileName")] = QFileInfo(cfg.filePath).fileName();
-        m_exposed.append(map);
+        m_exposed.append(QVariant(map));
     }
 
     QString status = tr("Done: %1 configs").arg(m_configs.size());
@@ -349,11 +408,11 @@ void WarpController::checkFinished()
 QString WarpController::randomEndpoint()
 {
     const QString prefix =
-        kEndpointPrefixes.at(QRandomGenerator::global()->bounded(kEndpointPrefixes.size()));
+        kEndpointPrefixes.at(QRandomGenerator::global()->bounded(static_cast<int>(kEndpointPrefixes.size())));
     const QString host = (prefix == QLatin1String("engage.cloudflareclient.com"))
                              ? prefix
                              : prefix + QString::number(randomInt(10, 99));
-    const int port = kEndpointPorts.at(QRandomGenerator::global()->bounded(kEndpointPorts.size()));
+    const int port = kEndpointPorts.at(QRandomGenerator::global()->bounded(static_cast<int>(kEndpointPorts.size())));
     return QStringLiteral("%1:%2").arg(host, QString::number(port));
 }
 

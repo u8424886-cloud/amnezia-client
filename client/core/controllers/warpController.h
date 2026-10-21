@@ -89,6 +89,10 @@ private:
 
     // (comment translated to English)
     void requestOne(int index);
+    // The direct API answers 404 outside a Cloudflare edge, so every request
+    // falls back to the public worker mirrors, one after another.
+    void tryMirror(int index);
+    void finishConfig(int index, const WarpKeys &keys, bool sipMask);
     void checkFinished();
     void clearOldConfigs();
     void writeConfigs(const QList<GeneratedConfig> &configs);
@@ -107,6 +111,7 @@ private:
 
     QNetworkAccessManager m_manager;
     QHash<int, QString> m_pendingKeys;
+    QHash<int, int> m_mirrorCursor;
 
     int m_targetCount = 5;
     int m_pending = 0;
