@@ -7,7 +7,7 @@ if (APPLE)
     # CMAKE_INSTALL_BINDIR must be called before find_package(Qt6) for
     # Qt to configure prefixes properly
     # FIXME: make Amnezia-service a bundle and remove this hack completely
-    set(CMAKE_INSTALL_BINDIR "AmneziaVPN.app/Contents/MacOS")
+    set(CMAKE_INSTALL_BINDIR "NimbusVPN.app/Contents/MacOS")
 endif()
 
 set(CMAKE_CXX_STANDARD 20)

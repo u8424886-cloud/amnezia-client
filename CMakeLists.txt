@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(PROJECT AmneziaVPN)
+set(PROJECT NimbusVPN)
 if(NOT AMNEZIAVPN_VERSION)
     set(AMNEZIAVPN_VERSION 5.1.0.0 CACHE STRING "Client app version")
 endif()
