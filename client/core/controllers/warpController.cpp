@@ -326,7 +326,7 @@ void WarpController::tryMirror(int index)
     qWarning() << "WARP: trying mirror" << url;
 
     QNetworkReply *reply = m_manager.get(mirrorRequest(url));
-    connect(reply, &QNetworkReply::finished, this, [this, reply, index]() {
+    connect(reply, &QNetworkReply::finished, this, [this, reply, index, url]() {
         const QVariantMap data = parseReply(reply);
         reply->deleteLater();
 
