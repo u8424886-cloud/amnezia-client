@@ -3,8 +3,8 @@
         <file>../fonts/pt-root-ui_vf.ttf</file>
     </qresource>
     <qresource prefix="/images">
-        <file>amneziaLogo.svg</file>
-        <file>AmneziaVPN.png</file>
+            <file>AmneziaVPN.png</file>
+    <file>nimbusLogo.png</file>
         <file>controls/alert-circle.svg</file>
         <file>controls/alert-triangle.svg</file>
         <file>update/updateHeroDark.jpg</file>
@@ -12,8 +12,8 @@
         <file>update/arrow-up-circle.svg</file>
         <file>update/wrench.svg</file>
         <file>update/arrow-down-circle.svg</file>
-        <file>controls/amnezia.svg</file>
-        <file>controls/app.svg</file>
+            <file>controls/app.svg</file>
+    <file>controls/nimbus.png</file>
         <file>controls/archive-restore.svg</file>
         <file>controls/arrow-left.svg</file>
         <file>controls/arrow-left-right.svg</file>

@@ -249,23 +249,6 @@ PageType {
         footer: ColumnLayout {
             width: listView.width
 
-            LinkButtonType {
-                id: siteLink2
-                Layout.topMargin: 24
-                Layout.bottomMargin: 16 + PageController.safeAreaBottomMargin
-                Layout.alignment: Qt.AlignHCenter
-
-                size: LinkButtonType.Medium
-
-                visible: Qt.platform.os !== "ios" && !IsMacOsNeBuild
-
-                text: qsTr("Site Amnezia")
-
-                rightImageSource: "qrc:/images/controls/external-link.svg"
-
-                onClicked: {
-                    Qt.openUrlExternally(LanguageUiController.getCurrentSiteUrl())
-                }
             }
         }
     }
@@ -299,7 +282,7 @@ PageType {
 
         property string title: qsTr("VPN by Amnezia")
         property string description: qsTr("The easiest way to connect to the VPN")
-        property string imageSource: "qrc:/images/controls/amnezia.svg"
+        property string imageSource: "qrc:/images/controls/nimbus.png"
         property bool featuredAmneziaConnection: true
         property bool isVisible: false  // Скрыт: свой сервер Amnezia не используется
         property var handler: function() {

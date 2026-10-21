@@ -178,7 +178,7 @@ PageType {
         id: about
 
         property string title: qsTr("About NimbusVPN")
-        readonly property string leftImagePath: "qrc:/images/controls/amnezia.svg"
+        readonly property string leftImagePath: "qrc:/images/controls/nimbus.png"
         property bool isVisible: true
         readonly property var clickedHandler: function() {
             PageController.goToPage(PageEnum.PageSettingsAbout)

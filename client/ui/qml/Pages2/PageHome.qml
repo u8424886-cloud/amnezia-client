@@ -71,7 +71,7 @@ PageType {
 
     function protocolDisplayName(protocol) {
         switch (protocol) {
-        case "awg": return "AmneziaWG"
+        case "awg": return "AWG"
         case "vless": return "VLESS"
         default: return protocol || ""
         }

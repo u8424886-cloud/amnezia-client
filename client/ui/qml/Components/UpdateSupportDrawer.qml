@@ -77,7 +77,7 @@ SheetType {
                 showSeparator: false
                 text: qsTr("amnezia.org")
                 subtitle: qsTr("Download the update manually")
-                icon.source: "qrc:/images/controls/amnezia.svg"
+                icon.source: "qrc:/images/controls/nimbus.png"
                 trailingIconSource: "qrc:/images/controls/chevron-right.svg"
 
                 onClicked: {

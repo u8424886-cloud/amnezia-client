@@ -8,9 +8,6 @@
         <source>Cancel</source>
         <translation>Отмена</translation>
     </message>
-</context>
-<context>
-    <name>AllowedDnsUiController</name>
     <message>
         <location filename="../ui/controllers/allowedDnsUiController.cpp" line="33"/>
         <source>The address does not look like a valid IP address</source>
@@ -56,9 +53,6 @@
         <source>Export completed</source>
         <translation>Экспорт завершен</translation>
     </message>
-</context>
-<context>
-    <name>ApiAccountInfoModel</name>
     <message>
         <location filename="../ui/models/api/apiAccountInfoModel.cpp" line="33"/>
         <location filename="../ui/models/api/apiAccountInfoModel.cpp" line="38"/>
@@ -75,17 +69,11 @@
         <source>%1 out of %2</source>
         <translation>%1 из %2</translation>
     </message>
-</context>
-<context>
-    <name>ApiServicesModel</name>
     <message>
         <location filename="../ui/models/api/apiServicesModel.cpp" line="77"/>
         <source>&lt;p&gt;&lt;a style=&quot;color: #EB5757;&quot;&gt;Not available in your region. If you have VPN enabled, disable it, return to the previous screen, and try again.&lt;/a&gt;</source>
         <translation>&lt;p&gt;&lt;a style=&quot;color: #EB5757;&quot;&gt;Недоступно в вашем регионе. Если у вас включен VPN, отключите его, вернитесь на предыдущий экран и попробуйте снова.&lt;/a&gt;</translation>
     </message>
-</context>
-<context>
-    <name>AppSplitTunnelingUiController</name>
     <message>
         <location filename="../ui/controllers/appSplitTunnelingUiController.cpp" line="28"/>
         <source>Application added: %1</source>
@@ -106,9 +94,6 @@
         <source>Application removed: %1</source>
         <translation>Приложение удалено: %1</translation>
     </message>
-</context>
-<context>
-    <name>CaptchaDialogType</name>
     <message>
         <location filename="../ui/qml/Controls2/CaptchaDialogType.qml" line="16"/>
         <source>Enter the digits from the image to continue</source>
@@ -129,17 +114,11 @@
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
-</context>
-<context>
-    <name>ConnectButton</name>
     <message>
         <location filename="../ui/qml/Components/ConnectButton.qml" line="29"/>
         <source>Unable to disconnect during configuration preparation</source>
         <translation>Невозможно отключиться во время подготовки конфигурации</translation>
     </message>
-</context>
-<context>
-    <name>ConnectionTypeSelectionDrawer</name>
     <message>
         <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="31"/>
         <source>Add new connection</source>
@@ -160,9 +139,6 @@
             <source>WARP Generator</source>
             <translation>Генератор WARP</translation>
         </message>
-</context>
-<context>
-    <name>ConnectionUiController</name>
     <message>
         <location filename="../ui/controllers/connectionUiController.cpp" line="59"/>
         <source>Connecting...</source>
@@ -196,9 +172,6 @@
         <source>Preparing...</source>
         <translation>Подготовка...</translation>
     </message>
-</context>
-<context>
-    <name>ContextMenuType</name>
     <message>
         <location filename="../ui/qml/Controls2/ContextMenuType.qml" line="55"/>
         <source>C&amp;ut</source>
@@ -219,9 +192,6 @@
         <source>&amp;SelectAll</source>
         <translation>Выбрать всё</translation>
     </message>
-</context>
-<context>
-    <name>CountriesEmptyState</name>
     <message>
         <location filename="../ui/qml/Components/CountriesEmptyState.qml" line="21"/>
         <source>Nothing found. Check the spelling or change your query</source>
@@ -242,9 +212,6 @@
         <source>Nothing found in &quot;%1&quot;</source>
         <translation>В категории «%1» ничего не найдено</translation>
     </message>
-</context>
-<context>
-    <name>CountryRegionNames</name>
     <message>
         <location filename="../ui/qml/Config/CountryRegionNames.qml" line="7"/>
         <source>Europe</source>
@@ -500,17 +467,11 @@
         <source>For networks with allowlists</source>
         <translation>Для работы в сетях с белыми списками</translation>
     </message>
-</context>
-<context>
-    <name>CountrySearchRow</name>
     <message>
         <location filename="../ui/qml/Components/CountrySearchRow.qml" line="27"/>
         <source>Country or region</source>
         <translation>Страна или регион</translation>
     </message>
-</context>
-<context>
-    <name>FavoriteButton</name>
     <message>
         <location filename="../ui/qml/Components/FavoriteButton.qml" line="12"/>
         <source>Remove from favorites</source>
@@ -521,25 +482,16 @@
         <source>Add to favorites</source>
         <translation>Добавить в избранное</translation>
     </message>
-</context>
-<context>
-    <name>HomeContainersListView</name>
     <message>
         <location filename="../ui/qml/Components/HomeContainersListView.qml" line="37"/>
         <source>Unable change protocol while there is an active connection</source>
         <translation>Невозможно изменить протокол во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>HomeServerSummary</name>
     <message>
         <location filename="../ui/qml/Components/HomeServerSummary.qml" line="101"/>
         <source>AmneziaWG 2.0 is outdated and no longer supported. Continued use requires a fresh installation of the AmneziaWG 3.1 container.</source>
         <translation>AmneziaWG 2.0 устарел и больше не поддерживается. Для дальнейшего использования требуется новая установка контейнера AmneziaWG 3.1.</translation>
     </message>
-</context>
-<context>
-    <name>HomeSplitTunnelingDrawer</name>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="33"/>
         <source>Split tunneling</source>
@@ -585,17 +537,11 @@ Can&apos;t be disabled for current server</source>
         <source>App-based split tunneling</source>
         <translation>Раздельное туннелирование приложений</translation>
     </message>
-</context>
-<context>
-    <name>ImportUiController</name>
     <message>
         <location filename="../ui/controllers/importUiController.cpp" line="185"/>
         <source>Scanned %1 of %2.</source>
         <translation>Отсканировано %1 из %2.</translation>
     </message>
-</context>
-<context>
-    <name>InstallUiController</name>
     <message>
         <location filename="../ui/controllers/selfhosted/installUiController.cpp" line="133"/>
         <location filename="../ui/controllers/selfhosted/installUiController.cpp" line="175"/>
@@ -665,9 +611,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Server added successfully</source>
         <translation>Сервер успешно добавлен</translation>
     </message>
-</context>
-<context>
-    <name>InstalledAppsDrawer</name>
     <message>
         <location filename="../ui/qml/Components/InstalledAppsDrawer.qml" line="42"/>
         <source>Choose application</source>
@@ -683,9 +626,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Add selected</source>
         <translation>Добавить выбранные</translation>
     </message>
-</context>
-<context>
-    <name>IpSplitTunnelingController</name>
     <message>
         <location filename="../core/controllers/ipSplitTunnelingController.cpp" line="224"/>
         <source>Failed to parse JSON data: %1</source>
@@ -696,9 +636,6 @@ Already installed containers were found on the server. All installed containers 
         <source>The JSON data is not an array</source>
         <translation>Данные в формате JSON не являются массивом</translation>
     </message>
-</context>
-<context>
-    <name>IpSplitTunnelingUiController</name>
     <message>
         <location filename="../ui/controllers/ipSplitTunnelingUiController.cpp" line="22"/>
         <source>New site added: %1</source>
@@ -729,17 +666,11 @@ Already installed containers were found on the server. All installed containers 
         <source>Export completed</source>
         <translation>Экспорт завершен</translation>
     </message>
-</context>
-<context>
-    <name>ListItemType</name>
     <message>
         <location filename="../ui/qml/Controls2/ListItemType.qml" line="43"/>
         <source>Available in Premium</source>
         <translation>Доступно в Premium</translation>
     </message>
-</context>
-<context>
-    <name>LogsUiController</name>
     <message>
         <location filename="../ui/controllers/logsUiController.cpp" line="113"/>
         <source>%1 B</source>
@@ -755,9 +686,6 @@ Already installed containers were found on the server. All installed containers 
         <source>%1 MB</source>
         <translation>%1 МБ</translation>
     </message>
-</context>
-<context>
-    <name>MinMaxRowType</name>
     <message>
         <location filename="../ui/qml/Controls2/MinMaxRowType.qml" line="76"/>
         <source>Min</source>
@@ -768,17 +696,11 @@ Already installed containers were found on the server. All installed containers 
         <source>Max</source>
         <translation>Макс</translation>
     </message>
-</context>
-<context>
-    <name>NavigationBarType</name>
     <message>
         <location filename="../ui/qml/Controls2/NavigationBarType.qml" line="49"/>
         <source>Back</source>
         <translation>Назад</translation>
     </message>
-</context>
-<context>
-    <name>NotificationHandler</name>
     <message>
         <location filename="../ui/utils/notificationHandler.cpp" line="57"/>
         <location filename="../ui/utils/notificationHandler.cpp" line="64"/>
@@ -805,9 +727,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Unsecured network detected: </source>
         <translation>Обнаружена незащищенная сеть: </translation>
     </message>
-</context>
-<context>
-    <name>PageDeinstalling</name>
     <message>
         <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="52"/>
         <source>Removing services from %1</source>
@@ -818,9 +737,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Usually it takes no more than 5 minutes</source>
         <translation>Обычно это занимает не более 5 минут</translation>
     </message>
-</context>
-<context>
-    <name>PageDevMenu</name>
     <message>
         <location filename="../ui/qml/Pages2/PageDevMenu.qml" line="57"/>
         <source>Gateway endpoint</source>
@@ -841,9 +757,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Dev gateway environment</source>
         <translation>Dev gateway environment</translation>
     </message>
-</context>
-<context>
-    <name>PageHome</name>
     <message>
         <location filename="../ui/qml/Pages2/PageHome.qml" line="131"/>
         <source>Logging enabled</source>
@@ -897,9 +810,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Servers</source>
         <translation>Серверы</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolAwgClientSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgClientSettings.qml" line="39"/>
         <source>AmneziaWG settings</source>
@@ -1020,9 +930,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolAwgSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="41"/>
         <source>AmneziaWG settings</source>
@@ -1203,9 +1110,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolOpenVpnSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="37"/>
         <source>OpenVPN Settings</source>
@@ -1399,9 +1303,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolRaw</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolRaw.qml" line="29"/>
         <source> settings</source>
@@ -1442,9 +1343,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolWireGuardClientSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardClientSettings.qml" line="34"/>
         <source>WG settings</source>
@@ -1495,9 +1393,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolWireGuardSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="35"/>
         <source>WG settings</source>
@@ -1543,9 +1438,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolXrayFlowSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolXrayFlowSettings.qml" line="33"/>
         <source>Flow</source>
@@ -1586,9 +1478,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolXraySecuritySettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolXraySecuritySettings.qml" line="35"/>
         <source>Security</source>
@@ -1665,9 +1554,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolXraySettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolXraySettings.qml" line="69"/>
         <source>Empty</source>
@@ -1761,9 +1647,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Reset</source>
         <translation>Сбросить</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolXraySnapshots</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolXraySnapshots.qml" line="29"/>
         <source>Save XRay configuration</source>
@@ -1867,9 +1750,6 @@ Create one from the current settings.</source>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolXrayTransportSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolXrayTransportSettings.qml" line="48"/>
         <source>Transport</source>
@@ -2114,9 +1994,6 @@ Create one from the current settings.</source>
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolXrayXPaddingBytesSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolXrayXPaddingBytesSettings.qml" line="35"/>
         <source>xPaddingBytes</source>
@@ -2152,9 +2029,6 @@ Create one from the current settings.</source>
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolXrayXPaddingSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolXrayXPaddingSettings.qml" line="35"/>
         <source>xPadding</source>
@@ -2217,9 +2091,6 @@ Create one from the current settings.</source>
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageProtocolXrayXmuxSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolXrayXmuxSettings.qml" line="48"/>
         <location filename="../ui/qml/Pages2/PageProtocolXrayXmuxSettings.qml" line="73"/>
@@ -2286,9 +2157,6 @@ Create one from the current settings.</source>
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageServiceDnsSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceDnsSettings.qml" line="26"/>
         <source>A DNS service is installed on your server, and it is only accessible via VPN.
@@ -2326,9 +2194,6 @@ Create one from the current settings.</source>
         <source>Cannot remove AmneziaDNS from running server</source>
         <translation>Невозможно удалить AmneziaDNS с работающего сервера</translation>
     </message>
-</context>
-<context>
-    <name>PageServiceMtProxySettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceMtProxySettings.qml" line="215"/>
         <source>Checking...</source>
@@ -2804,9 +2669,6 @@ Create one from the current settings.</source>
         <source>NAT external IP: enter a valid IPv4 address</source>
         <translation>Внешний IP для NAT: введите корректный адрес IPv4</translation>
     </message>
-</context>
-<context>
-    <name>PageServiceSftpSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="21"/>
         <source>Settings updated successfully</source>
@@ -2882,9 +2744,6 @@ Create one from the current settings.</source>
         <source>Detailed instructions</source>
         <translation>Подробные инструкции</translation>
     </message>
-</context>
-<context>
-    <name>PageServiceSocksProxySettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="23"/>
         <source>Settings updated successfully</source>
@@ -2962,9 +2821,6 @@ Create one from the current settings.</source>
         <source>Username cannot be empty</source>
         <translation>Имя пользователя не может быть пустым</translation>
     </message>
-</context>
-<context>
-    <name>PageServiceTProxySettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceTProxySettings.qml" line="151"/>
         <source>TProxy started</source>
@@ -3165,9 +3021,6 @@ Create one from the current settings.</source>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
-</context>
-<context>
-    <name>PageServiceTelemtSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceTelemtSettings.qml" line="215"/>
         <source>Checking...</source>
@@ -3606,9 +3459,6 @@ Create one from the current settings.</source>
         <source>Public IP: enter a valid IPv4 address</source>
         <translation>Публичный IP: введите корректный адрес IPv4</translation>
     </message>
-</context>
-<context>
-    <name>PageServiceTorWebsiteSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceTorWebsiteSettings.qml" line="22"/>
         <source>Settings updated successfully</source>
@@ -3645,9 +3495,6 @@ Create one from the current settings.</source>
         <source>When configuring WordPress set the this onion address as domain.</source>
         <translation>При настройке WordPress укажите этот onion-адрес в качестве домена.</translation>
     </message>
-</context>
-<context>
-    <name>PageSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="48"/>
         <source>Settings</source>
@@ -3693,9 +3540,6 @@ Create one from the current settings.</source>
         <source>Dev console</source>
         <translation>Консоль разработчика</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsAbout</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="21"/>
         <source>You have the latest version of NimbusVPN</source>
@@ -3708,13 +3552,13 @@ Create one from the current settings.</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="78"/>
-        <source>Support Amnezia</source>
-        <translation>Поддержите Amnezia</translation>
+        <source>Free and open source</source>
+        <translation>Бесплатный и с открытым исходным кодом</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="86"/>
-        <source>Amnezia is a free and open-source application. You can support the developers if you like it.</source>
-        <translation>Amnezia — это бесплатное приложение с открытым исходным кодом. Поддержите разработчиков, если оно вам нравится.</translation>
+        <source>NimbusVPN is a free and open-source VPN client with a built-in generator of free Cloudflare WARP configurations.</source>
+        <translation>NimbusVPN — бесплатный VPN-клиент с открытым исходным кодом и встроенным генератором бесплатных конфигураций Cloudflare WARP.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="98"/>
@@ -3747,34 +3591,9 @@ Create one from the current settings.</source>
         <translation>Политика конфиденциальности</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="204"/>
-        <source>Telegram group</source>
-        <translation>Группа в Telegram</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="205"/>
         <source>To discuss features</source>
         <translation>Для обсуждения возможностей</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="208"/>
-        <source>https://telegram.me/amnezia_vpn_en</source>
-        <translation>https://telegram.me/amnezia_vpn</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="215"/>
-        <source>support@amnezia.org</source>
-        <translation>support@amnezia.org</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="216"/>
-        <source>For reviews and bug reports</source>
-        <translation>Для отзывов и сообщений об ошибках</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="219"/>
-        <source>mailto:support@amnezia.org</source>
-        <translation>mailto:support@amnezia.org</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="226"/>
@@ -3788,22 +3607,9 @@ Create one from the current settings.</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="230"/>
-        <source>https://github.com/amnezia-vpn/amnezia-client</source>
-        <translation>https://github.com/amnezia-vpn/amnezia-client</translation>
+        <source>https://github.com/u8424886-cloud/amnezia-client</source>
+        <translation>https://github.com/u8424886-cloud/amnezia-client</translation>
     </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="237"/>
-        <source>Website</source>
-        <translation>Веб-сайт</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="238"/>
-        <source>Visit official website</source>
-        <translation>Посетить официальный сайт</translation>
-    </message>
-</context>
-<context>
-    <name>PageSettingsApiAvailableCountries</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiAvailableCountries.qml" line="252"/>
         <source>Subscription expired</source>
@@ -3849,9 +3655,6 @@ Create one from the current settings.</source>
         <source>Locations</source>
         <translation>Локации</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsApiDevices</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiDevices.qml" line="37"/>
         <source>Active Devices</source>
@@ -3907,9 +3710,6 @@ Create one from the current settings.</source>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsApiInstructions</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiInstructions.qml" line="22"/>
         <source>Windows</source>
@@ -3990,9 +3790,6 @@ Create one from the current settings.</source>
         <source>Setup guides on the Amnezia website</source>
         <translation>Инструкции по настройке</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsApiNativeConfigs</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiNativeConfigs.qml" line="21"/>
         <source>Save NimbusVPN config</source>
@@ -4088,9 +3885,6 @@ Create one from the current settings.</source>
         <source>Update available</source>
         <translation>Обновление доступно</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsApiServerInfo</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiServerInfo.qml" line="29"/>
         <source>Subscription Status</source>
@@ -4231,9 +4025,6 @@ Create one from the current settings.</source>
         <source>Cannot remove server during active connection</source>
         <translation>Невозможно удалить сервер во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsApiSubscriptionKey</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiSubscriptionKey.qml" line="89"/>
         <source>Copy key</source>
@@ -4274,9 +4065,6 @@ Create one from the current settings.</source>
         <source>To read the QR code in the NimbusVPN app, tap + in the main menu → &apos;QR code&apos;</source>
         <translation>Чтобы прочитать QR-код в приложении NimbusVPN, нажмите + в главном меню → «QR code»</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsApiSupport</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiSupport.qml" line="22"/>
         <source>Telegram</source>
@@ -4291,11 +4079,6 @@ Create one from the current settings.</source>
         <location filename="../ui/qml/Pages2/PageSettingsApiSupport.qml" line="38"/>
         <source>Email Billing &amp; Orders</source>
         <translation>По вопросам оплаты</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApiSupport.qml" line="46"/>
-        <source>Website</source>
-        <translation>Сайт</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiSupport.qml" line="73"/>
@@ -4317,9 +4100,6 @@ Create one from the current settings.</source>
         <source>Copied</source>
         <translation>Скопировано</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsAppSplitTunneling</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="27"/>
         <source>Cannot change split tunneling settings during active connection</source>
@@ -4380,9 +4160,6 @@ Create one from the current settings.</source>
         <source>Executable files (*.*)</source>
         <translation>Исполняемые файлы (*.*)</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsApplication</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="35"/>
         <source>Application</source>
@@ -4503,9 +4280,6 @@ Create one from the current settings.</source>
         <source>Cannot reset settings during active connection</source>
         <translation>Невозможно сбросить настройки во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsBackup</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="25"/>
         <source>Settings restored from backup file</source>
@@ -4582,9 +4356,6 @@ Create one from the current settings.</source>
         <source>Cannot restore backup settings during active connection</source>
         <translation>Невозможно восстановить настройки из резервной копии во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsConnection</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="36"/>
         <source>Connection</source>
@@ -4640,9 +4411,6 @@ Create one from the current settings.</source>
         <source>Blocks network connections without VPN</source>
         <translation>Блокирует интернет-соединение без VPN</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsDns</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="20"/>
         <source>Default server does not support custom DNS</source>
@@ -4708,9 +4476,6 @@ Create one from the current settings.</source>
         <source>Settings saved</source>
         <translation>Настройки сохранены</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsKillSwitch</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="36"/>
         <source>KillSwitch</source>
@@ -4776,9 +4541,6 @@ Create one from the current settings.</source>
         <source>DNS servers listed here will remain accessible when KillSwitch is active.</source>
         <translation>DNS-серверы из этого списка останутся доступными при активном KillSwitch.</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsKillSwitchExceptions</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="57"/>
         <source>DNS Exceptions</source>
@@ -4862,9 +4624,6 @@ Create one from the current settings.</source>
         <source>Add imported addresses to existing ones</source>
         <translation>Добавить импортированные адреса к существующим</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsLogViewer</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogViewer.qml" line="49"/>
         <source>Save</source>
@@ -4905,9 +4664,6 @@ Create one from the current settings.</source>
         <source>No logs yet</source>
         <translation>Логов пока нет</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsLogging</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="107"/>
         <source>Logging</source>
@@ -5008,17 +4764,11 @@ Create one from the current settings.</source>
         <source>Clear all logs</source>
         <translation>Очистить все логи</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsNewsNotifications</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsNewsNotifications.qml" line="31"/>
         <source>News &amp; Notifications</source>
         <translation>Новости и Уведомления</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsServerData</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="28"/>
         <source>All installed containers have been added to the application</source>
@@ -5130,9 +4880,6 @@ Create one from the current settings.</source>
         <source>Cannot reset API config during active connection</source>
         <translation>Невозможно сбросить конфигурацию API во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsServerInfo</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="129"/>
         <source>Protocols</source>
@@ -5148,9 +4895,6 @@ Create one from the current settings.</source>
         <source>Management</source>
         <translation>Управление</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsServerProtocol</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="38"/>
         <source> settings</source>
@@ -5233,17 +4977,11 @@ Create one from the current settings.</source>
         <source>Cannot remove active container</source>
         <translation>Невозможно удалить активный контейнер</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsServersList</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServersList.qml" line="30"/>
         <source>Servers</source>
         <translation>Серверы</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsSplitTunneling</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="29"/>
         <source>Cannot change split tunneling settings during active connection</source>
@@ -5364,9 +5102,6 @@ Create one from the current settings.</source>
         <source>Add imported sites to existing ones</source>
         <translation>Добавить импортированные сайты к существующим</translation>
     </message>
-</context>
-<context>
-    <name>PageSetupWizardApiFreeInfo</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardApiFreeInfo.qml" line="68"/>
         <source>Free features</source>
@@ -5376,18 +5111,6 @@ Create one from the current settings.</source>
         <location filename="../ui/qml/Pages2/PageSetupWizardApiFreeInfo.qml" line="114"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
-    </message>
-</context>
-<context>
-    <name>PageSetupWizardApiPremiumInfo</name>
-    <message numerus="yes">
-        <location filename="../ui/qml/Pages2/PageSetupWizardApiPremiumInfo.qml" line="96"/>
-        <source>Try free for %n day(s)</source>
-        <translation>
-            <numerusform>Попробуйте бесплатно %n день</numerusform>
-            <numerusform>Попробуйте бесплатно %n дня</numerusform>
-            <numerusform>Попробуйте бесплатно %n дней</numerusform>
-        </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardApiPremiumInfo.qml" line="114"/>
@@ -5414,15 +5137,6 @@ Create one from the current settings.</source>
         <location filename="../ui/qml/Pages2/PageSetupWizardApiPremiumInfo.qml" line="252"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../ui/qml/Pages2/PageSetupWizardApiPremiumInfo.qml" line="214"/>
-        <source>Start %n-day free trial</source>
-        <translation>
-            <numerusform>Начать бесплатный период на %n день</numerusform>
-            <numerusform>Начать бесплатный период на %n дня</numerusform>
-            <numerusform>Начать бесплатный период на %n дней</numerusform>
-        </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardApiPremiumInfo.qml" line="216"/>
@@ -5464,23 +5178,11 @@ Create one from the current settings.</source>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
-    <message numerus="yes">
-        <location filename="../ui/qml/Pages2/PageSetupWizardApiPremiumInfo.qml" line="277"/>
-        <source>%n day(s) free, then %1/%2. Auto-renews until canceled. Cancel anytime in Settings.</source>
-        <translation>
-            <numerusform>%n день бесплатно, затем %1/%2. Автопродление до отмены. Отменить можно в настройках.</numerusform>
-            <numerusform>%n дня бесплатно, затем %1/%2. Автопродление до отмены. Отменить можно в настройках.</numerusform>
-            <numerusform>%n дней бесплатно, затем %1/%2. Автопродление до отмены. Отменить можно в настройках.</numerusform>
-        </translation>
-    </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardApiPremiumInfo.qml" line="280"/>
         <source>%1/%2, auto-renewal. Cancel anytime in the Settings.</source>
         <translation>%1/%2, автопродление. Отменить можно в любой момент в настройках.</translation>
     </message>
-</context>
-<context>
-    <name>PageSetupWizardApiServicesList</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardApiServicesList.qml" line="33"/>
         <source>VPN by Amnezia</source>
@@ -5496,9 +5198,6 @@ Create one from the current settings.</source>
         <source>Recommended</source>
         <translation>Рекомендуется</translation>
     </message>
-</context>
-<context>
-    <name>PageSetupWizardApiTrialEmail</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardApiTrialEmail.qml" line="47"/>
         <source>Create an account</source>
@@ -5530,9 +5229,6 @@ Create one from the current settings.</source>
         <source>Enter a valid email address</source>
         <translation>Введите корректный адрес электронной почты</translation>
     </message>
-</context>
-<context>
-    <name>PageSetupWizardConfigSource</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="45"/>
         <source>Connection</source>
@@ -5610,11 +5306,6 @@ Create one from the current settings.</source>
         <translation>Рекомендуется</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="262"/>
-        <source>Site Amnezia</source>
-        <translation>Сайт Amnezia</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="286"/>
         <source>VPN by Amnezia</source>
         <translation>VPN от Amnezia</translation>
@@ -5684,9 +5375,6 @@ Create one from the current settings.</source>
             <source>Generate free Cloudflare WARP configs</source>
             <translation>Сгенерировать бесплатные конфиги Cloudflare WARP</translation>
         </message>
-</context>
-<context>
-    <name>PageSetupWizardCredentials</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="63"/>
         <source>Configure your server</source>
@@ -5772,9 +5460,6 @@ Create one from the current settings.</source>
         <source>SSH Username</source>
         <translation>Имя пользователя SSH</translation>
     </message>
-</context>
-<context>
-    <name>PageSetupWizardEasy</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardEasy.qml" line="65"/>
         <source>Choose Installation Type</source>
@@ -5800,9 +5485,6 @@ Create one from the current settings.</source>
         <source>Skip setup</source>
         <translation>Пропустить настройку</translation>
     </message>
-</context>
-<context>
-    <name>PageSetupWizardInstalling</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="25"/>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="69"/>
@@ -5839,9 +5521,6 @@ Create one from the current settings.</source>
         <source>Cancel installation</source>
         <translation>Отменить установку</translation>
     </message>
-</context>
-<context>
-    <name>PageSetupWizardProtocolSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardProtocolSettings.qml" line="110"/>
         <source>Installing %1</source>
@@ -5923,9 +5602,6 @@ Create one from the current settings.</source>
         <source>The port must be in the range of 1 to 65535</source>
         <translation>Порт должен быть в диапазоне от 1 до 65535</translation>
     </message>
-</context>
-<context>
-    <name>PageSetupWizardProtocols</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardProtocols.qml" line="52"/>
         <source>VPN protocol</source>
@@ -5936,25 +5612,16 @@ Create one from the current settings.</source>
         <source>Choose the one with the highest priority for you. Later, you can install other protocols and additional services, such as DNS proxy and SFTP.</source>
         <translation>Выберите протокол, который вам больше подходит. В дальнейшем можно установить другие протоколы и дополнительные сервисы, такие как DNS-прокси и SFTP.</translation>
     </message>
-</context>
-<context>
-    <name>PageSetupWizardQrReader</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardQrReader.qml" line="41"/>
         <source>Point the camera at the QR code and hold for a couple of seconds. </source>
         <translation>Наведите камеру на QR-код и удерживайте ее в течение нескольких секунд. </translation>
     </message>
-</context>
-<context>
-    <name>PageSetupWizardStart</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="67"/>
         <source>Let&apos;s get started</source>
         <translation>Приступим</translation>
     </message>
-</context>
-<context>
-    <name>PageSetupWizardTextKey</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="36"/>
         <source>Connection key</source>
@@ -5980,9 +5647,6 @@ Create one from the current settings.</source>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
-</context>
-<context>
-    <name>PageSetupWizardViewConfig</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="66"/>
         <source>New connection</source>
@@ -6013,9 +5677,6 @@ Create one from the current settings.</source>
         <source>Connect</source>
         <translation>Подключиться</translation>
     </message>
-</context>
-<context>
-    <name>PageShare</name>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="35"/>
         <source>Config revoked</source>
@@ -6206,9 +5867,6 @@ Create one from the current settings.</source>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
-</context>
-<context>
-    <name>PageShareConnection</name>
     <message>
         <location filename="../ui/qml/Pages2/PageShareConnection.qml" line="25"/>
         <source>Share</source>
@@ -6249,9 +5907,6 @@ Create one from the current settings.</source>
         <source>This config is too large for a QR code. Share the file or copy the connection settings instead.</source>
         <translation>Эта конфигурация слишком велика для QR-кода. Поделитесь файлом или скопируйте настройки подключения.</translation>
     </message>
-</context>
-<context>
-    <name>PageShareFullAccess</name>
     <message>
         <location filename="../ui/qml/Pages2/PageShareFullAccess.qml" line="43"/>
         <source>Full access to the server and VPN</source>
@@ -6295,9 +5950,6 @@ Create one from the current settings.</source>
         <source>Access error!</source>
         <translation>Ошибка доступа!</translation>
     </message>
-</context>
-<context>
-    <name>PageStart</name>
     <message>
         <location filename="../ui/qml/Pages2/PageStart.qml" line="215"/>
         <source>Logging was disabled after 14 days, log files were deleted</source>
@@ -6333,9 +5985,6 @@ Create one from the current settings.</source>
         <source>Add</source>
         <translation>Добавить</translation>
     </message>
-</context>
-<context>
-    <name>PageUpdate</name>
     <message>
         <location filename="../ui/qml/Pages2/PageUpdate.qml" line="24"/>
         <source>Done. Install the update</source>
@@ -6387,9 +6036,6 @@ Create one from the current settings.</source>
         <source>Retry</source>
         <translation>Повторить</translation>
     </message>
-</context>
-<context>
-    <name>QObject</name>
     <message>
         <location filename="../core/utils/errorStrings.cpp" line="11"/>
         <source>No error</source>
@@ -7264,17 +6910,11 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <source>Can&apos;t find the colon separator between hostname and port</source>
         <translation>Невозможно найти разделитель-двоеточие между именем хоста и портом</translation>
     </message>
-</context>
-<context>
-    <name>RadioItemType</name>
     <message>
         <location filename="../ui/qml/Controls2/RadioItemType.qml" line="38"/>
         <source>Available in Premium</source>
         <translation>Доступно в Premium</translation>
     </message>
-</context>
-<context>
-    <name>RenameServerDrawer</name>
     <message>
         <location filename="../ui/qml/Components/RenameServerDrawer.qml" line="36"/>
         <source>Server name</source>
@@ -7285,25 +6925,16 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
-</context>
-<context>
-    <name>SearchFieldType</name>
     <message>
         <location filename="../ui/qml/Controls2/SearchFieldType.qml" line="22"/>
         <source>Search</source>
         <translation>Поиск</translation>
     </message>
-</context>
-<context>
-    <name>SecureServersRepository</name>
     <message>
         <location filename="../core/repositories/secureServersRepository.cpp" line="225"/>
         <source>Server</source>
         <translation>Сервер</translation>
     </message>
-</context>
-<context>
-    <name>SelectLanguageDrawer</name>
     <message>
         <location filename="../ui/qml/Components/SelectLanguageDrawer.qml" line="43"/>
         <source>Back</source>
@@ -7314,17 +6945,11 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <source>Choose language</source>
         <translation>Выберите язык</translation>
     </message>
-</context>
-<context>
-    <name>ServerListItem</name>
     <message>
         <location filename="../ui/qml/Components/ServerListItem.qml" line="36"/>
         <source>Server settings</source>
         <translation>Настройки сервера</translation>
     </message>
-</context>
-<context>
-    <name>ServersListView</name>
     <message>
         <location filename="../ui/qml/Components/ServersListView.qml" line="66"/>
         <source>Subscription expired. Please renew</source>
@@ -7340,9 +6965,6 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <source>Unable change server while there is an active connection</source>
         <translation>Невозможно изменить сервер во время активного соединения</translation>
     </message>
-</context>
-<context>
-    <name>ServersUiController</name>
     <message>
         <location filename="../ui/controllers/serversUiController.cpp" line="99"/>
         <source>Legacy API v1 configs are no longer supported. Remove this server to continue.</source>
@@ -7353,9 +6975,6 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <source>Use the remove action to delete this legacy config.</source>
         <translation>Воспользуйтесь действием &quot;Удалить&quot; чтобы удалить эту устаревшую конфигурацию.</translation>
     </message>
-</context>
-<context>
-    <name>ServicesCatalogController</name>
     <message>
         <location filename="../core/controllers/api/servicesCatalogController.cpp" line="258"/>
         <source>%1/mo</source>
@@ -7368,25 +6987,16 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <comment>IAP: card footer minimum monthly price from StoreKit</comment>
         <translation>от %1 в месяц</translation>
     </message>
-</context>
-<context>
-    <name>SettingsUiController</name>
     <message>
         <location filename="../ui/controllers/settingsUiController.cpp" line="159"/>
         <source>All settings have been reset to default values</source>
         <translation>Все настройки сброшены до значений по умолчанию</translation>
     </message>
-</context>
-<context>
-    <name>SnackbarType</name>
     <message>
         <location filename="../ui/qml/Controls2/SnackbarType.qml" line="193"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
-</context>
-<context>
-    <name>SortCountriesDrawer</name>
     <message>
         <location filename="../ui/qml/Components/SortCountriesDrawer.qml" line="34"/>
         <source>Sort countries</source>
@@ -7402,9 +7012,6 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <source>Alphabetically</source>
         <translation>По алфавиту</translation>
     </message>
-</context>
-<context>
-    <name>SubscriptionExpiredDrawer</name>
     <message>
         <location filename="../ui/qml/Components/SubscriptionExpiredDrawer.qml" line="38"/>
         <source> subscription has expired</source>
@@ -7425,9 +7032,6 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <source>Support</source>
         <translation>Поддержка</translation>
     </message>
-</context>
-<context>
-    <name>SubscriptionUiController</name>
     <message>
         <location filename="../ui/controllers/api/subscriptionUiController.cpp" line="242"/>
         <location filename="../ui/controllers/api/subscriptionUiController.cpp" line="282"/>
@@ -7498,9 +7102,6 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <source>Server &apos;%1&apos; was removed</source>
         <translation>Сервер &apos;%1&apos; был удален</translation>
     </message>
-</context>
-<context>
-    <name>SystemTrayNotificationHandler</name>
     <message>
         <location filename="../ui/utils/systemTrayNotificationHandler.cpp" line="26"/>
         <location filename="../ui/utils/systemTrayNotificationHandler.cpp" line="75"/>
@@ -7531,25 +7132,16 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <source>Quit</source>
         <translation>Закрыть</translation>
     </message>
-</context>
-<context>
-    <name>TermsAndPrivacyText</name>
     <message>
         <location filename="../ui/qml/Components/TermsAndPrivacyText.qml" line="20"/>
         <source>By continuing, you agree to the &lt;a href=&quot;%1&quot; style=&quot;color: %3;&quot;&gt;Terms of Use&lt;/a&gt; and &lt;a href=&quot;%2&quot; style=&quot;color: %3;&quot;&gt;Privacy Policy&lt;/a&gt;</source>
         <translation>Продолжая, вы соглашаетесь с &lt;a href=&quot;%1&quot; style=&quot;color: %3;&quot;&gt;Условиями использования&lt;/a&gt; и &lt;a href=&quot;%2&quot; style=&quot;color: %3;&quot;&gt;Политикой конфиденциальности&lt;/a&gt;</translation>
     </message>
-</context>
-<context>
-    <name>TextFieldType</name>
     <message>
         <location filename="../ui/qml/Controls2/TextFieldType.qml" line="117"/>
         <source>The field can&apos;t be empty</source>
         <translation>Поле не может быть пустым</translation>
     </message>
-</context>
-<context>
-    <name>UpdateSupportDrawer</name>
     <message>
         <location filename="../ui/qml/Components/UpdateSupportDrawer.qml" line="35"/>
         <source>Support</source>
@@ -7576,19 +7168,9 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <translation>https://t.me/amnezia_vpn</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/UpdateSupportDrawer.qml" line="60"/>
-        <source>support@amnezia.org</source>
-        <translation>support@amnezia.org</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Components/UpdateSupportDrawer.qml" line="61"/>
         <source>Support email</source>
         <translation>Email поддержки</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/UpdateSupportDrawer.qml" line="66"/>
-        <source>mailto:support@amnezia.org</source>
-        <translation>mailto:support@amnezia.org</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/UpdateSupportDrawer.qml" line="75"/>
@@ -7600,17 +7182,11 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <source>Download the update manually</source>
         <translation>Скачать обновление вручную</translation>
     </message>
-</context>
-<context>
-    <name>VpnConnection</name>
     <message>
         <location filename="../vpnConnection.cpp" line="554"/>
         <source>Mbps</source>
         <translation>Мбит/с</translation>
     </message>
-</context>
-<context>
-    <name>VpnProtocol</name>
     <message>
         <location filename="../core/protocols/vpnProtocol.cpp" line="136"/>
         <source>Unknown</source>
@@ -7651,9 +7227,6 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
-</context>
-<context>
-    <name>XrayConfigModel</name>
     <message>
         <location filename="../ui/models/protocols/xrayConfigModel.cpp" line="709"/>
         <source>Port must be in the range of 1 to 65535</source>
@@ -7674,17 +7247,11 @@ FileZilla или другие SFTP-клиенты, а также смонтир�
         <source>Path must start with &quot;/&quot;</source>
         <translation>Путь должен начинаться с &quot;/&quot;</translation>
     </message>
-</context>
-<context>
-    <name>XrayConfigSnapshotsModel</name>
     <message>
         <location filename="../ui/models/protocols/xrayConfigSnapshotsModel.cpp" line="144"/>
         <source>Invalid JSON format</source>
         <translation>Неверный формат JSON</translation>
     </message>
-</context>
-<context>
-    <name>main2</name>
     <message>
         <location filename="../ui/qml/main2.qml" line="226"/>
         <source>Private key passphrase</source>
@@ -7722,9 +7289,6 @@ Remove the server from the app to continue.</source>
         <source>Cannot remove server during active connection</source>
         <translation>Невозможно удалить сервер во время активного соединения</translation>
     </message>
-</context>
-    <context>
-        <name>PageSetupWizardWarpGenerator</name>
         <message>
             <location filename="../ui/qml/Pages2/PageSetupWizardWarpGenerator.qml" line="1"/>
             <source>WARP Generator</source>
@@ -7756,9 +7320,6 @@ Remove the server from the app to continue.</source>
             <source>Open configs folder</source>
             <translation>Открыть папку с конфигами</translation>
         </message>
-    </context>
-    <context>
-        <name>WarpController</name>
         <message>
             <location filename="../core/controllers/warpController.cpp" line="1"/>
             <source>Generating configs...</source>

@@ -132,7 +132,7 @@ PageType {
                         text: qsTr("Don't have a server?")
                         subtitle: qsTr("Amnezia Hosting - VPN servers without complicated settings")
 
-                        icon.source: "qrc:/images/controls/amnezia.svg"
+                        icon.source: "qrc:/images/controls/nimbus.png"
 
                         onClicked: {
                             Qt.openUrlExternally(LanguageUiController.getCurrentHostUrl())
