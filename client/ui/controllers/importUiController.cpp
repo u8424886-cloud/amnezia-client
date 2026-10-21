@@ -6,6 +6,8 @@
 #include <QMutex>
 #include <QJsonDocument>
 
+#include "core/utils/constants/configKeys.h"
+
 #include "systemController.h"
 
 #ifdef Q_OS_ANDROID
@@ -62,8 +64,9 @@ bool ImportUiController::extractConfigFromFile(const QString &fileName)
     return true;
 }
 
-bool ImportUiController::extractConfigFromData(QString data)
+bool ImportUiController::extractConfigFromData(QString data, QString serverName)
 {
+    m_serverName = serverName;
     auto result = m_importController->extractConfigFromData(data);
     
     if (result.errorCode != ErrorCode::NoError) {
@@ -75,6 +78,7 @@ bool ImportUiController::extractConfigFromData(QString data)
     m_configFileName = result.configFileName;
     m_maliciousWarningText = result.maliciousWarningText;
     m_isNativeWireGuardConfig = result.isNativeWireGuardConfig;
+    applyServerName();
     
     emit importConfigChanged();
     return true;
@@ -121,14 +125,25 @@ bool ImportUiController::isNativeWireGuardConfig()
 void ImportUiController::processNativeWireGuardConfig()
 {
     m_config = m_importController->processNativeWireGuardConfig(m_config);
+    applyServerName();
     emit importConfigChanged();
+}
+
+void ImportUiController::applyServerName()
+{
+    if (m_serverName.isEmpty() || m_config.isEmpty()) {
+        return;
+    }
+    m_config[configKey::description] = m_serverName;
 }
 
 void ImportUiController::importConfig()
 {
+    applyServerName();
     m_importController->importConfig(m_config);
     
     m_config = {};
+    m_serverName.clear();
     m_configFileName.clear();
     m_maliciousWarningText.clear();
     m_isNativeWireGuardConfig = false;

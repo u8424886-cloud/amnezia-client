@@ -13,6 +13,8 @@
 #include <QVariantList>
 #include <QVariantMap>
 
+class ServersController;
+
 // (comment translated to English)
 //
 // (comment translated to English)
@@ -40,11 +42,11 @@ class WarpController : public QObject
     Q_PROPERTY(bool hasConfigs READ hasConfigs NOTIFY configsChanged)
 
 public:
-    explicit WarpController(QObject *parent = nullptr);
+    explicit WarpController(ServersController *serversController, QObject *parent = nullptr);
     ~WarpController() = default;
 
     // (comment translated to English)
-    Q_INVOKABLE void generate(int count = 5);
+    Q_INVOKABLE void generate(int count = 3);
 
     // (comment translated to English)
     Q_INVOKABLE QString configText(int index) const;
@@ -55,6 +57,10 @@ public:
 
     // (comment translated to English)
     Q_INVOKABLE void openConfigsFolder();
+
+    // Drops the servers that were created from previously generated WARP
+    // configs, so the server list does not fill up with stale entries.
+    Q_INVOKABLE void removeOldWarpServers();
 
     bool busy() const { return m_busy; }
     QString statusText() const { return m_statusText; }
@@ -108,6 +114,8 @@ private:
     static QString extractEndpoint(const QString &conf);
 
     QString buildConf(const WarpKeys &keys, bool sipMask = false);
+
+    ServersController *m_serversController = nullptr;
 
     QNetworkAccessManager m_manager;
     QHash<int, QString> m_pendingKeys;

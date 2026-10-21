@@ -21,7 +21,7 @@ public slots:
     void importConfig();
     void clearConfigFileName();
     bool extractConfigFromFile(const QString &fileName);
-    bool extractConfigFromData(QString data);
+    bool extractConfigFromData(QString data, QString serverName = QString());
     bool extractConfigFromQr(const QByteArray &data);
     QString getConfig();
     QString getConfigFileName();
@@ -50,6 +50,7 @@ signals:
     void importConfigChanged();
 
 private:
+    void applyServerName();
 #if defined Q_OS_ANDROID || defined Q_OS_IOS
     void stopDecodingQr();
 #endif
@@ -60,6 +61,8 @@ private:
     QString m_configFileName;
     QString m_maliciousWarningText;
     bool m_isNativeWireGuardConfig;
+    // Name to give to the server that this config becomes.
+    QString m_serverName;
 
 #if defined Q_OS_ANDROID
     static ImportUiController* mInstance;

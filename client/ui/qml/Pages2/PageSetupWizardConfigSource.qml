@@ -114,11 +114,11 @@ PageType {
                         onClicked: {
                             var fileName = ""
                             if (GC.isMobile()) {
-                                fileName = "AmneziaVPN.log"
+                                fileName = "NimbusVPN.log"
                             } else {
                                 fileName = SystemController.getFileName(qsTr("Save"),
                                                                         qsTr("Logs files (*.log)"),
-                                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/AmneziaVPN",
+                                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/NimbusVPN",
                                                                         true,
                                                                         ".log")
                             }

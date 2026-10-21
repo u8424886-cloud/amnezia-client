@@ -204,7 +204,7 @@ void CoreController::initControllers()
     m_importController = new ImportUiController(m_importCoreController, this);
     setQmlContextProperty("ImportController", m_importController);
 
-    m_warpController = new WarpController(this);
+    m_warpController = new WarpController(m_serversController, this);
     setQmlContextProperty("WarpController", m_warpController);
 
     m_exportUiController = new ExportUiController(m_exportController, this);

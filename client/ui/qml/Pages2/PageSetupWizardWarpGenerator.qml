@@ -51,18 +51,6 @@ PageType {
                     backButtonVisible: root.stackView !== null && root.stackView.depth > 1
                 }
 
-                BasicCardType {
-                    Layout.fillWidth: true
-                    Layout.topMargin: 16
-                    Layout.leftMargin: 16
-                    Layout.rightMargin: 16
-
-                    text: qsTr("How it works")
-                    subtitle: qsTr("Every config gets its own key pair right on this computer. The public key "
-                                 + "goes to Cloudflare, the private key stays in the config. Addresses and ports "
-                                 + "are random so the traffic does not stand out.")
-                }
-
                 ButtonType {
                     Layout.fillWidth: true
                     Layout.topMargin: 16
@@ -70,11 +58,11 @@ PageType {
                     Layout.rightMargin: 16
 
                     text: WarpController.hasConfigs ? qsTr("Regenerate")
-                                                   : qsTr("Generate 5 configs")
+                                                   : qsTr("Generate 3 configs")
 
                     enabled: !WarpController.busy
 
-                    onClicked: WarpController.generate(5)
+                    onClicked: WarpController.generate(3)
                 }
 
                 SmallTextType {
@@ -113,7 +101,11 @@ PageType {
                         onClicked: {
                             // The config text goes straight into the import,
                             // no file selection dialog.
-                            if (ImportController.extractConfigFromData(WarpController.configText(index))) {
+                            if (ImportController.extractConfigFromData(WarpController.configText(index),
+                                                                      WarpController.configName(index))) {
+                                // The server imported from the previous WARP
+                                // configs is dropped, so the list stays clean.
+                                WarpController.removeOldWarpServers()
                                 PageController.goToPage(PageEnum.PageSetupWizardViewConfig)
                             }
                         }

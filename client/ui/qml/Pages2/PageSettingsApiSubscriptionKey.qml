@@ -110,7 +110,7 @@ PageType {
                     var fileName = GC.isMobile()
                         ? root.processedServer.name.toLowerCase().replace(/\s+/g, "_") + "_key.vpn"
                         : SystemController.getFileName(
-                            qsTr("Save AmneziaVPN config"),
+                            qsTr("Save NimbusVPN config"),
                             qsTr("Config files (*.vpn)"),
                             StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/" + root.processedServer.name.toLowerCase().replace(/\s+/g, "_") + "_key",
                             true,
@@ -170,7 +170,7 @@ PageType {
 
                 horizontalAlignment: Text.AlignHCenter
                 color: AmneziaStyle.color.textTertiary
-                text: qsTr("To read the QR code in the Amnezia app, tap + in the main menu → 'QR code'")
+                text: qsTr("To read the QR code in the NimbusVPN app, tap + in the main menu → 'QR code'")
             }
 
             Item {

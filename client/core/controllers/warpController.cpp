@@ -21,6 +21,9 @@
 #include <openssl/evp.h>
 #include <openssl/rand.h>
 
+#include "core/controllers/serversController.h"
+#include "core/models/serverDescription.h"
+
 namespace
 {
 
@@ -98,7 +101,11 @@ QString withPrefix(const QString &value, const QString &fallback)
 
 }  // namespace
 
-WarpController::WarpController(QObject *parent) : QObject(parent) {}
+WarpController::WarpController(ServersController *serversController, QObject *parent)
+    : QObject(parent),
+      m_serversController(serversController)
+{
+}
 
 // --------------------------------------------------------------------------
 // (comment translated to English)
@@ -362,6 +369,21 @@ void WarpController::finishConfig(int index, const WarpKeys &keys, bool sipMask)
     m_generated.append(cfg);
 
     checkFinished();
+}
+
+void WarpController::removeOldWarpServers()
+{
+    if (!m_serversController) {
+        return;
+    }
+
+    const auto servers = m_serversController->buildServerDescriptions(false);
+    for (const amnezia::ServerDescription &server : servers) {
+        if (server.serverName.startsWith(QStringLiteral("WARP"), Qt::CaseInsensitive)) {
+            qWarning() << "WARP: removing previously imported server" << server.serverName;
+            m_serversController->removeServer(server.serverId);
+        }
+    }
 }
 
 void WarpController::checkFinished()
