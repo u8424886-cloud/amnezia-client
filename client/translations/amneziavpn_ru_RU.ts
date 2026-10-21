@@ -5360,11 +5360,6 @@ Create one from the current settings.</source>
         <source>Restore purchases</source>
         <translation>Восстановить покупки</translation>
     </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="394"/>
-        <source>I have nothing</source>
-        <translation>У меня ничего нет</translation>
-    </message>
         <message>
             <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="1"/>
             <source>WARP Generator</source>
