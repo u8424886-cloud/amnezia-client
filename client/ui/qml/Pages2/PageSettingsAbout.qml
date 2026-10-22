@@ -197,20 +197,6 @@ PageType {
     }
 
     property list<QtObject> contacts: [
-        github
     ]
-
-
-
-    QtObject {
-        id: github
-
-        readonly property string title: qsTr("GitHub")
-        readonly property string description: qsTr("Discover the source code")
-        readonly property string imageSource: "qrc:/images/controls/github.svg"
-        readonly property var handler: function() {
-            Qt.openUrlExternally(qsTr("https://github.com/u8424886-cloud/amnezia-client"))
-        }
-    }
 
 }
